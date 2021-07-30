@@ -1,0 +1,17 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+  name: db-tester
+  namespace: sample
+spec:
+  rules:
+  - http:
+      paths:
+      - backend:
+          serviceName: db-tester
+          servicePort: 8080
+        path: /db-tester
+        pathType: Prefix
+

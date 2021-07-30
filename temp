@@ -1,0 +1,31 @@
+
+
+1. endpoint url/uri
+    - ip address / hostname
+    - port
+    - protocol (jdbc, http, https ....)
+
+    Ex. mysql-server:3306
+        http://myapplication:8080
+
+2. Authentication
+   - username/password
+   - username/token
+   - token
+   - LDAP, IAM
+
+
+Simple Example
+ For MYSQL DB
+     - HOST
+     - PORT
+     - USERNAME
+     - PASSWORD
+     - DATABASE
+
+
+Development Environment : DB for dev  env will be different
+QA Environment : DB for qa  env will be different
+Production Environment : prod for dev  env will be different
+
+

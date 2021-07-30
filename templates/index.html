@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>DB Tester</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="jumbotron text-center", class=>
+  <h1>{{title}}</h1>
+  <p></p>
+</div>
+
+<div class="container">
+  <div class="row">
+
+    <div class="col-sm-4">
+      <p></p>
+    </div>
+
+    <div class="col-sm-8">
+      <h3>My SQL Database Connection Status</h3>
+      {% if status == 'Success' %}
+        <p style="color:Green; font-size:30px">Connection Successful..!!!</p>
+      {% else %}
+        <p style="color:Red; font-size:30px">Connection Failed..!!!</p>
+        <br>
+        <p>DB Host: {{ config.MYSQL_HOST }}</p>
+        <p>DB Port: {{ config.MYSQL_PORT }}</p>
+        <p>DB Name: {{ config.MYSQL_DATABASE }}</p>
+        <p>DB User: {{ config.MYSQL_USER }}</p>
+        <p>DB Pass: {{ config.MYSQL_PASSWORD }}</p>
+        <br>
+        <p>Please check if above configurations are correct and host is reachable.</p>
+      {% endif %}
+    </div>
+
+    <div class="col-sm-4">
+      <p></p>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
