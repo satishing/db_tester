@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: db-tester-cm
+  namespace: sample
+data:
+  APP_NAME: db-tester
